@@ -10,9 +10,37 @@ class HomePage extends StatelessWidget {
       appBar: appBar(),
       backgroundColor: Colors.white,
       body:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          mainSearchBar()
-          
+          mainSearchBar(),
+          SizedBox(height: 40,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left:20),
+                child: Text('Category',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+                ),
+                ),
+              ),
+
+              SizedBox(height: 40,),
+
+              Container(
+                height: 150,
+                color: Colors.green,
+                child: ListView.builder(
+                  itemBuilder: (context,index) {
+                    return Container();
+                  },
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
